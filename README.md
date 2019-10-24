@@ -1,38 +1,41 @@
 # kinectblender
 Blender kinect data importer
+Broken project for study only!!!
 
-Kinect szenzorral felépített 3D környezet.
+Kinect sensor with 3D environment
 
-Alapanyagok: 
+--Needs:
 
-Kinect 360 XBOX + windows tápegység
+Kinect 360 XBOX + windows power supply
 Kinect SDK 1.5
-Blender python script javított verziója
-Blender alap fájl
+Kinect - blender software (http://blender.vsb.cz/index.php/en/kinect-blender)
+Blender python script new version
+Blender base file
 
-Blender3D
+Blender3D (about 2.5)
 MakeHuman
 
-Fontos: A Blender fileban levő python script nem a legutolsó verzió, azt mindig töltsük le innen!
+Important: You need refresh the script in the A Blender file. Download the latest version from here.
 
-Telepítés:
+--Install:
 
-1. Az MS SDK feltelpítése után a szenzor működik (újraindítás kell)
-2. A Kinect - Blender softwer telepítése után elindítható és a kinect képét mutatja.
-3. A Kinect-Blender UDP Start gombal kezdi sugározni a kinect adatokat a 127.0.0.1 portra, melyet a python scrypt fogad
-4. Blender elindítása után a mellékelt (nem a csomagban levő!) alapot beolvassuk. KinectArmature_OK5… fájl. Ebben a fájlban megtalálható a Kinect-Blender softwerhez adaptált eredeti skeleton (utolsó előtti rétegen) Illetve az ezt működtető objektumhalmaz (utolsó rétegen) Ezekkel nincs teendőnk, mivel erről veszi le az adatokat a javyított python script és teszi rá a makehuman karakterünkre. Tehát a két réteg nem törlendő :)
-5. Az 1-3 rétegeken található a MakeHuman karakter, melyet össze kell kötnünk a működtető réteggen lévő skeletonnal (utolsó előtti layer) 
-6. A Script screen tartalmazza a python scriptet, melyet el kell indítanunk, hogy legyen a TOOLS Panelen egy Kinect panel. Ez kell a használathoz. A python scríypt egyébként mellékelve és beolvasható és úgy is elindítható. 
-7. A panelen be kell állítani a csatlakoztatni kívánt MakeHuman karakter skeletont. Alapesetben woman2 de ha új karaktert hozunk be és ezt töröljük, akkor annak nevét kell beírni. A setup skeleton után a karakterünk összekötve a működtető skeletonnal.
-8. Start megnyomására a Kinec-Blender softwerrel sugárzott adatokat a működtető skeletonra (az pedig a mi makehuman karakterünkre) kerül a 3D adat. Azaz a modellünk mozog, ha a kinect mozgó alakot talál.
-9. Influence a karaktermozgatási adatok milyen erősségben kerüljenek felhasználásra.
-10. Transform csak abban az esetben, ha a makeHuman ból kimentett karakter nem tartalmaz rotation limitet. 
+1. The MS SDK install. Sensor is working (reboot neded)
+2. The Kinect - Blender software intall and run. You can see the kinect picture.
+3. The Kinect-Blender broadcats the UDP data with click Start button. (to 127.0.0.1 and the receiver the python script )
+4. Start Blender and load the KinectArmature_OK5… file. In the blender you found the original Kinect-Blender sofware adapted skeleton (before last layer). Working data in last layer. You don't need change it. Don't clear these layers.
+5. The makehuman character is in the 1-3 layers, need connect to before last layers skeleton. 
+6. The Script screens contains the python script. Need to start, and this create a Kinect panel in the TOOLS panel. This need it for use. This python script can open from file too. 
+7. In this panel you need to setup the connected Makehuman skeleton. Originally woman2. After this tep the skeleton is working.
+8. Click Start button. The Kinec-Blender boadcasted data recevied to the working skeleton (and transferred via connection to my makehuman skeleton) So in this case the skeleton will moving if kinect found a moving character. 
+9: Influence
+10. Transform if the makeHuman imported character not contains rotation limit. 
 
-A scrípt kétféle makehuman karaktert képes kezelni. 
+The scrípt can use tow kind of makehuman character. 
 
-hibák:
-Ha a karakterünk rosszul mozogna, akkor 180 fokkal forgassuk el az alaját. 
+Errors:
+Lot of.. :)))
+and if the character moving bad, then try to turn the base platform with 180 degree. 
 
 
-
+(Thanks to Michal Polcer for idea)
 
